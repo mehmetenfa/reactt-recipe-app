@@ -6,6 +6,7 @@ const Navbar = () => {
       <div>
         <NavLink
           className="text-blue-500"
+          to="/home"
           style={({ isActive }) => ({
             color: isActive ? "red" : "",
           })}
