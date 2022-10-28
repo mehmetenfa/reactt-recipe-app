@@ -1,25 +1,23 @@
-import axios from "axios";
 import { useState, useEffect } from "react";
+import axios from "axios";
+import RecipeCard from "../pages/RecipeCard"
 
 const Form = () => {
-  const [searchBar, setSearchBard] = useState(null);
+  const [searchBar, setSearchBar] = useState(null);
   const [meal, setMeal] = useState(null);
+  const [data, setData] = useState(null);
 
-  const apiKey = "9106687aa002608785d98d2e5bf2c844";
-  const apiId = "795a37fe";
-
-  // const apps = {
-  //   apikey: process.env.REACT_APP_apiKey,
-  //   apiId: process.env.REACT_APP_apiId,
-  // }
+  const api_key = "8a73009571cb02899f2e2400ce448e72	";
+  const app_id = "91a8071c";
 
   const getApi = () => {
     axios
       .get(
-        `https://api.edamam.com/search?q=${searchBar}&app_id=${apiId}&app_key=${apiKey}&mealType=${meal}`
+        `https://api.edamam.com/search?q=${searchBar}&app_id=${app_id}&app_key=${api_key}&mealType=${meal}`
       )
       .then((res) => {
-        console.log(res);
+        console.log(res.data.hits);
+        setData(res.data.hits);
       })
       .catch((err) => console.log(err));
   };
@@ -30,16 +28,17 @@ const Form = () => {
 
   return (
     <>
-      <div className="flex justify-center items-center mt-5 flex-wrap">
+      <div className="flex justify-center items-center mt-5 flex-wrap ">
         <div className="flex gap-3">
           <input
             type="text"
-            className="bg-black text-white p-2 rounded-lg"
+            className="bg-black text-white p-2 rounded-lg "
             placeholder="Search"
             onChange={(e) => {
-              setSearchBard(e.target.value);
+              setSearchBar(e.target.value);
             }}
           />
+
           <select
             className="rounded-lg bg-black text-white p-1"
             onChange={(e) => {
@@ -53,9 +52,15 @@ const Form = () => {
             <option value="teatime">Teatime</option>
           </select>
         </div>
-        <button className="rounded-lg bg-black text-white p-2 w-[5rem] ml-5" onClick={() => getApi()}>
+        <button
+          className="rounded-lg bg-black text-white p-2 w-[5rem] ml-5"
+          onClick={() => getApi()}
+        >
           Search
         </button>
+      </div>
+      <div className="flex flex-wrap items-center justify-center ">
+        {data && data.map((item, idx) => <RecipeCard data={item} key={idx} />)}
       </div>
     </>
   );
