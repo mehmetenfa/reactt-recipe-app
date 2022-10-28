@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 
 const Login = () => {
-  
+
   const navigate = useNavigate()
 
 
@@ -10,7 +10,7 @@ const Login = () => {
   return (
     <div className="bgcontainer flex justify-center items-center">
       <div className="rounded-full h-[25rem] w-[25rem] flex justify-center items-center">
-        <form className="flex flex-col gap-4">
+        <form className="flex flex-col gap-4" onSubmit={() => navigate("home")}>
           <img
             src="https://svgsilh.com/svg/2085075.svg"
             alt="img"
