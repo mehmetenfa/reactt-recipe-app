@@ -4,23 +4,29 @@ const About = () => {
     <div className="">
       <Navbar />
       <div>
-        <div className="flex justify-center flex-col items-center mt-[5rem]">
-          <img
-            src="https://media2.giphy.com/media/jTNG3RF6EwbkpD4LZx/giphy.gif"
-            alt=""
-            width="350px"
-          />
-          <div className="text-center w-[25rem] ">
-            <p className="text-2xl mt-5 font-semibold  ">
-              My name is <span className="text-red-600">Mustafa</span> , 18
-              years old React developer from Turkey
-            </p>
-
-            <p className="text-xl mt-5 leading-8">
-              In high school i start to learn coding and software things little
-              and little until today, and in april 2022, I start to learn
-              front-end finally I'm learning reactjs.
-            </p>
+        <div className="flex flex-col justify-center items-center text-center">
+          <div className="flex flex-col justify-center items-center text-center mt-7">
+            <h1 className="text-3xl mb-2">About</h1>
+            <p className="w-[14rem] h-[0.3rem] bg-red-700 rounded-xl mb-5"></p>
+          </div>
+          <div className="flex flex-col items-center">
+            <h1 className="text-2xl mb-2">Tools</h1>
+            <p className="w-[10rem] h-[0.3rem] bg-red-700 rounded-xl mb-5"></p>
+            <div className="text-xl">
+              <p>React</p>
+              <p>React Router DOM v6</p>
+              <p>React Icons</p>
+              <p>Tailwind CSS</p>
+              <p>HTML</p>
+              <p>JavaScript</p>
+              <p>Axios</p>
+            </div>
+            <div className="flex flex-col items-center">
+                <h1 className="text-2xl mb-2 mt-5">Usefull Link</h1>
+                <p className="w-[10rem] h-[0.3rem] bg-red-700 rounded-xl mb-5"></p>
+                <a href="https://github.com/qxan" className="hover:underline text-xl">My Github Page</a>
+                <a href="https://www.linkedin.com/in/menfavakitsayan/" className="hover:underline text-xl">My Linkedin Page</a>
+            </div>
           </div>
         </div>
       </div>

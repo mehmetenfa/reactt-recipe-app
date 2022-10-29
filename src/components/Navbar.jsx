@@ -31,7 +31,7 @@ const Navbar = () => {
           href="https://github.com/qxan/reactt-recipe-app"
           target="_blank"
         >
-         <IoLogoGithub className="text-black" /> GITHUB
+         <IoLogoGithub className="text-black" /> SOURCE
         </a>
 
         <NavLink
