@@ -1,5 +1,5 @@
-import Header from '../components/Header'
-import Navbar from '../components/Navbar'
+import Navbar from "../../components/navbar/Navbar";
+import Header from "../../components/header/Header";
 
 const Home = () => {
   return (
@@ -7,7 +7,7 @@ const Home = () => {
       <Navbar />
       <Header />
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

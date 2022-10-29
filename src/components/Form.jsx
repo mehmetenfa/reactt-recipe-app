@@ -1,14 +1,14 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import RecipeCard from "../pages/RecipeCard"
+import RecipeCard from "../../pages/home/RecipeCard";
 
 const Form = () => {
   const [searchBar, setSearchBar] = useState(null);
   const [meal, setMeal] = useState(null);
   const [data, setData] = useState(null);
 
-  const api_key = "8a73009571cb02899f2e2400ce448e72	";
-  const app_id = "91a8071c";
+  const api_key = "9106687aa002608785d98d2e5bf2c844";
+  const app_id = "795a37fe";
 
   const getApi = () => {
     axios

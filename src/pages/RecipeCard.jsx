@@ -21,3 +21,5 @@ const RecipeCard = ({ data }) => {
     </div>
   );
 };
+
+export default RecipeCard;
