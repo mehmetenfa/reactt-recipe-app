@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import RecipeCard from "../../pages/home/RecipeCard";
+import RecipeCard from "../pages/RecipeCard";
 
 const Form = () => {
   const [searchBar, setSearchBar] = useState(null);
