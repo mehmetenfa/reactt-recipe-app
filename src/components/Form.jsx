@@ -1,3 +1,4 @@
+import { IoSearch } from "react-icons/io5";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import RecipeCard from "../pages/RecipeCard";
@@ -29,10 +30,10 @@ const Form = () => {
   return (
     <>
       <div className="flex justify-center items-center mt-5 flex-wrap ">
-        <div className="flex gap-3">
+        <div className="flex gap-3 bg-black rounded-3xl">
           <input
             type="text"
-            className="bg-black text-white p-2 rounded-lg "
+            className="bg-black text-white p-2 rounded-xl active:border-none "
             placeholder="Search"
             onChange={(e) => {
               setSearchBar(e.target.value);
@@ -40,7 +41,7 @@ const Form = () => {
           />
 
           <select
-            className="rounded-lg bg-black text-white p-1"
+            className="rounded-xl bg-black text-white p-1"
             onChange={(e) => {
               setMeal(e.target.value);
             }}
@@ -51,15 +52,15 @@ const Form = () => {
             <option value="snack">Snack</option>
             <option value="teatime">Teatime</option>
           </select>
+          <button
+            className="rounded-xl bg-black text-white p-2 w-[7rem] ml-5"
+            onClick={() => getApi()}
+          >
+            <IoSearch className="w-[5 rem] text-2xl" />
+          </button>
         </div>
-        <button
-          className="rounded-lg bg-black text-white p-2 w-[5rem] ml-5"
-          onClick={() => getApi()}
-        >
-          Search
-        </button>
       </div>
-      <div className="flex flex-wrap items-center justify-center ">
+      <div className="flex flex-wrap items-center justify-center mt-10 ">
         {data && data.map((item, idx) => <RecipeCard data={item} key={idx} />)}
       </div>
     </>

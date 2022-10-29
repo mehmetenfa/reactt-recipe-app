@@ -1,4 +1,4 @@
-import { IoFastFoodOutline, IoHome, IoPerson, IoLogoGithub, IoExit } from "react-icons/io5";
+import { IoFastFood, IoHome, IoPerson, IoLogoGithub, IoExit } from "react-icons/io5";
 import { NavLink } from "react-router-dom";
 const Navbar = () => {
   return (
@@ -8,7 +8,7 @@ const Navbar = () => {
           className="text-white text-3xl flex items-center gap-3"
           to="/home"
         >
-          <IoFastFoodOutline className="text-3xl text-black" /> RECIPE
+          <IoFastFood className="text-3xl text-black" /> RECIPE
         </NavLink>
       </div>
 
