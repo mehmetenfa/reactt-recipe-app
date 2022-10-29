@@ -1,4 +1,4 @@
-import { IoFastFoodOutline } from "react-icons/io5";
+import { IoFastFoodOutline, IoHome, IoPerson, IoLogoGithub, IoExit } from "react-icons/io5";
 import { NavLink } from "react-router-dom";
 const Navbar = () => {
   return (
@@ -8,31 +8,37 @@ const Navbar = () => {
           className="text-white text-3xl flex items-center gap-3"
           to="/home"
         >
-          <IoFastFoodOutline className="text-3xl text-white" /> RECIPE
+          <IoFastFoodOutline className="text-3xl text-black" /> RECIPE
         </NavLink>
       </div>
 
       <div className="text-white text-3xl w-[60rem] flex justify-center items-center gap-8">
         <NavLink
-          className="hover:text-black transition ease-in-out delay-100 hover:scale-125 "
+          className="flex gap-2 hover:text-black transition ease-in-out delay-100 hover:scale-125 "
+          to="/home"
+        >
+         <IoHome className="text-black" /> HOME
+        </NavLink>
+        <NavLink
+          className="flex gap-2 hover:text-black transition ease-in-out delay-100 hover:scale-125 "
           to="/about"
         >
-          ABOUT
+         <IoPerson className="text-black" /> ABOUT
         </NavLink>
 
         <a
-          className="hover:text-black transition ease-in-out delay-100 hover:scale-125"
+          className="flex gap-2 hover:text-black transition ease-in-out delay-100 hover:scale-125"
           href="https://github.com/qxan/reactt-recipe-app"
           target="_blank"
         >
-          GITHUB
+         <IoLogoGithub className="text-black" /> GITHUB
         </a>
 
         <NavLink
-          className="hover:text-black transition ease-in-out delay-100 hover:scale-125 "
+          className="flex gap-2 hover:text-black transition ease-in-out delay-100 hover:scale-125 "
           to="/"
         >
-          LOGOUT
+         <IoExit className="text-black" /> LOGOUT
         </NavLink>
       </div>
     </nav>
